@@ -1,0 +1,89 @@
+@import "../../app.scss";
+.navbar {
+    height: 100px;
+    width: 90%;
+    margin:auto;
+   
+
+    .wrapper {
+        max-width: 1336px;
+        padding: 20px;
+        flex-wrap: wrap;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+ @include mobile{
+              justify-content:flex-end ;
+            }
+        span {
+            font-weight: bolder;
+            font-size: large;
+
+            #gt {
+                color: #00c6ff;
+            }
+            @include mobile{
+                display: none;
+            }
+        }
+
+        .social {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            @include mobile{
+                gap: 10px;
+                justify-content: flex-end;
+            }
+            // flex-wrap: wrap;
+            .button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                @include mobile{
+                    flex-wrap: wrap;
+                    // display: none;
+
+                }
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 20px;
+                    border: 2px solid white;
+                    border-radius: 10px;
+                    background-color: transparent;
+                    color: white;
+                    font-weight: 300;
+                    margin: 2px;
+                    cursor: pointer; /* This ensures the cursor turns into a pointer when hovering */
+                    transition: background-color 0.3s ease;
+                    width: 100px;
+                    height: 25px;
+                    font-size: x-small;
+                    z-index: 2;
+                    @include mobile{
+                        width: 50px;
+                        height: 20px;
+                        font-size:  10px; ;
+                        // display: none;
+                        
+                    }
+                }
+            }
+          
+      
+
+            img {
+                width: 25px;
+            }
+        }
+    }
+}

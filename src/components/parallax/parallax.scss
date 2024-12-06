@@ -1,0 +1,68 @@
+@import "../../app.scss";
+.parallax {
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Hide any overflow */
+    z-index: 1;
+    scroll-behavior: smooth;
+    
+    h1 {
+        // position: absolute;
+        font-size: 100px;
+        color: white; /* Ensure text is visible */
+        z-index: 1; /* Text stays on top */
+        // top: 20%;
+        @include mobile{
+            font-size: 72px;
+        }
+    }
+
+    .mountains {
+        background-image: url("/mountains.png"); /* Corrected path */
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 3; /* Above planets */
+        @include mobile{
+            background-size: contain ;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .planets {
+        background-image: url("/planets.png"); /* Corrected path */
+        background-size: cover;
+        background-position: bottom;
+       
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2; /* Below mountains */
+        @include mobile{
+            background-size: contain ;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .stars {
+        background-image: url("/stars.png"); /* Corrected path */
+        // background-size: cover;
+        // position: absolute;
+        // left: -200%;
+        background-position: bottom;
+        width: 400%;
+        height: 100%;
+        position: absolute;
+        z-index: 1; /* Below planets */
+        @include mobile{
+            background-size: contain ;
+            background-repeat: no-repeat;
+        }
+    }
+}

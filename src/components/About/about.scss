@@ -1,0 +1,137 @@
+@import '../../app.scss';
+
+.about{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    gap: 20px;
+    scroll-behavior: smooth;
+    background: linear-gradient(180deg,#0c0c1d,#111132);
+    overflow: hidden;
+    .header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         h1{
+            font-size: 100px;
+            color: white;
+            letter-spacing: 10px;
+          @include mobile{
+            font-size: 30px;
+         padding-left: 40px;
+         margin-top: 30px;
+          } 
+        }
+    }
+    .sechead
+    {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        h2{
+            margin: auto;
+            padding: 20px;
+            font-size: 50px;
+            text-decoration: underline;
+            color: #FFFFFF;
+            @include mobile{
+                font-size: 10px;
+                font-weight: bold;
+              } 
+            
+
+
+
+
+        }
+    }
+    .detail {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        position: relative;
+        justify-content: space-between;
+        gap: 10px;
+      
+        @include mobile {
+          margin: 0;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          top: auto;
+          left: auto;
+        }
+      
+        .para {
+            position: relative;
+            width: 90%;
+          
+            @include mobile {
+              position: absolute;
+              top: 10%;
+              width: 100%;
+              height: auto; // Adjust height dynamically for content
+              text-align: center; // Ensure alignment looks good on mobile
+              padding: 10px; // Add padding for spacing
+            }
+          
+            h3 {
+              font-size: 1.5rem;
+              line-height: 1.8; // Improve text readability
+          
+              @include mobile {
+                font-size: 10px !important;
+                text-align: justify; // Justify text for neatness
+                line-height: 1.5; // Adjust line height for smaller screens
+              }
+            }
+          }
+          
+        
+      
+          .image {
+            position: relative; // Ensure it aligns within the parent container
+            width: 40%; // Desktop width
+            margin: auto; // Center the container
+            display: flex; // Flexbox for alignment
+            align-items: center; // Center items vertically
+            justify-content: center; // Center items horizontally
+            overflow: hidden; // Clip overflowing content
+            top: 0;
+            
+          
+            @include mobile {
+              position: absolute; // Allow custom positioning for mobile
+              
+              width: 80%; // Mobile-specific width
+              
+    height: 500px;
+    top: 250px;
+
+            }
+          
+            img {
+              width: 100%; // Scale to fit the container width
+              height: 50%; // Maintain aspect ratio
+              padding: 0; // Remove padding for cleaner layout
+            }
+          }
+        }          
+      
+    
+    .back{
+
+        background-image: url("/stars.png");
+        background-position: bottom;
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+    }
+
+    
+}

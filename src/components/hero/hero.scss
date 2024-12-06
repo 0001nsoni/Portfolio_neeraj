@@ -1,0 +1,131 @@
+@import "../../app.scss";
+
+.hero {
+  height: calc(100vh - 100px); /* Viewport height minus header */
+  overflow: hidden;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  @include mobile{
+    flex-direction: column;
+  }
+
+
+  .wrapper {
+    width: 70%; /* Left half of the screen */
+    height: 100%; /* Full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out items vertically */
+    padding: 20px; /* Inner spacing */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    overflow: hidden; /* Prevent content overflow */
+    @include mobile{
+      padding: 10px;
+      height: 50%;
+      width: 100%;
+      
+    }
+
+    .textContainer {
+      flex-grow: 1; /* Allow the text to expand within available space */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto; /* Center the text vertically */
+      gap: 30px;
+@include mobile{
+  height: 50%;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+
+padding-left: 10px;
+  
+
+}
+      h2 {
+        font-size: 30px;
+        color: purple;
+        letter-spacing: 10px;
+        cursor: default;
+        @include mobile{
+          font-size: 15px;
+          letter-spacing: 5px;
+        }
+      }
+
+      h1 {
+        font-size: 80px;
+        cursor: default;
+        margin: 0; /* Remove default margin */
+        @include mobile{
+          font-size: 40px;
+         
+          
+        }
+      }
+
+      
+        
+       
+        }
+      }
+    
+
+   
+  
+
+  .imageContainer {
+    width: 30%; /* Circular container */
+    height: 30vw;
+    position: relative;
+    top: 20%; /* Adjust as needed */
+    right: 8%; /* Adjust as needed */
+    border-radius: 50%; /* Circular shape */
+    overflow: hidden; /* Hide content outside the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #0c0c1d, #111132);
+    @include mobile{
+      top: -6%;
+    left: 20%;
+    width: 70%;
+    height: 40%;
+    }
+
+    img {
+      width: 100vw; /* Image fills the container */
+      position: relative;
+      top: 10vh; /* Adjust as needed */
+    }
+  }
+
+  
+  .slidingTextContainer {
+    position: absolute;
+    font-size: 50vh;
+    bottom: -80px;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
+  }
+  .scrollar{
+    position: absolute;
+    right: 1%;
+    bottom: 5%;
+    width: 3vw;
+    height: 6vh;
+    cursor: pointer;
+    @include mobile{
+      top: 40%;
+    right: 40%;
+    width: 50px;
+    }
+
+  }
+}
